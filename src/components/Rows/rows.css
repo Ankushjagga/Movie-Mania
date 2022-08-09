@@ -1,0 +1,105 @@
+.row_poster{
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: transform 450ms;
+ 
+   
+}
+.row_poster:hover{
+    transform: scale(1.08);
+}
+.row_posters{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.images{
+    margin: 10px 13px;
+    padding: 7px;
+    background-color: #282c34;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 10px;
+}
+.images:hover{
+    cursor: pointer;
+    
+}
+.title{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+color: #E50914;
+
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+
+}
+.details>h5{
+    width: 70%;
+}
+
+.MuiDialog-paperWidthSm{
+    background-color: #282c34 !important;
+    color: #e4e6eb !important;
+}
+.dialog_back{
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.detail{
+    margin-top: 10px;
+}
+
+.tagline{
+    opacity: .4;
+    color: white;
+}
+.detail>p{
+    margin: 6px;
+    padding: 4px;
+}
+.close{
+    font-size: 18px;
+    border: 1px solid #eb3300;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #eb3300;
+    text-align: center;
+    font-weight: bold;
+}
+.seemore{
+    font-size: 18px;
+    border: 1px solid green;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar{
+    display: none !important;
+}
+@media screen and (max-width:350px) {
+.title{
+    font-size: 20px;
+}
+}

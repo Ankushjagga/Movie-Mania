@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: black;
+    height: 2.5rem;
+    padding: .3rem;
+    font-size: 1.1rem;
+}
+/* .copy{
+    margin: 10rem;
+} */
+@media screen and (max-width:664px) {
+.copy{
+    margin: 0 2rem ;
+}
+.footer{
+    height: 3rem;
+}
+}

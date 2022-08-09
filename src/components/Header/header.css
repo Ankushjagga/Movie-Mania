@@ -1,0 +1,164 @@
+.start{
+    display: flex;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.header>h1{
+    color: #E50914;
+    margin: 10px;
+    font-size: 40px;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+
+}
+.header{
+    display: flex;
+    margin: 0 2rem;
+}
+.links>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+.links>ul>li{
+    margin: 5px 26px;
+    padding: 16px;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    transition: transform 250ms ease;
+}
+.links>ul>li:hover{
+border-bottom: 1px solid #E50914;
+;
+transform: scale(1.07);
+color: #E50914;
+
+}
+a{
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+#search{
+    width: 25%;
+    border-radius: 7px;
+    margin: 15px 0;
+    padding: 10px;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+}
+svg{
+    margin: -4px 13px;
+}
+.logolink{
+    text-decoration: none;
+    list-style: none;
+}
+.hamburger{
+    display: none;
+}
+.Nlinks{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #242526;
+    transform: translatex(0);
+    transition: all 0.5s ease-in-out;
+    height: 100vh;
+    padding-top: 3.5rem;
+width: 200px;
+display: flex;
+flex-direction: column;
+}
+.Nlinks>ul>li{
+    margin: 5px 10px;
+    padding: 15px;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    font-size: 21px;
+}
+.closes{
+    position: fixed;
+    top: 22px;
+    right: 15px;
+    visibility: hidden;
+}
+
+@media screen and (max-width:960px) {
+.links{
+    display: none;
+}
+.header>h1{
+    font-size: 30px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.hamburger{
+
+    display: flex;
+    width: 100%;
+    margin: 20px 17px;
+    justify-content: flex-end;
+}
+.closes{
+    visibility: visible;
+}
+svg{
+    font-size: 24px;
+    margin: 0;
+}
+
+}
+@media screen and (max-width:1185px) {
+svg{
+    margin: -2px 4px;
+}
+.links>ul>li>a {
+    margin: 5px 15px;
+    padding: 8px;
+}
+.links>ul>li{
+    font-size: 23px;
+    margin: 21px 6px;
+    padding: 0;
+}
+.links>ul{
+    margin: 0 50px;
+}
+}
+
+
+@media screen and (max-width:1047px) {
+
+    .links>ul>li {
+        font-size: 20px;
+        margin: 21px 2px;
+    }
+    }
+@media screen and (max-width:350px) {
+.hamburger{
+    margin: 15px 3px;
+
+}
+.header>h1{
+    font-size: 25px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+
+}
