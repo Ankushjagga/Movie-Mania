@@ -1,43 +1,56 @@
-import React, { useEffect, useState } from "react";
-import axios from "../Api/axios";
+import React,{useState} from 'react'
+import Header from "../../components/Header/header";
+import Footer from '../../components/Footer/Footer';
+import { AiOutlineSearch } from "react-icons/ai";
 import Axios from "axios";
-import "./rows.css";
 import {
   Dialog,
   DialogTitle,
   DialogActions,
   DialogContent,
 } from "@material-ui/core";
+import "./search.css"
 const base_url = "https://image.tmdb.org/t/p/original/";
-function Rows({ fetchurl, title }) {
-  const [movies, setMovies] = useState([]);
-  const [show, setShow] = useState(false);
-  const [movie, updateMovie] = useState([]);
 
-  useEffect(() => {
-    async function fetchdata() {
-      const request = await axios.get(fetchurl);
-      setMovies(request.data.results);
-      return request;
-    }
-    fetchdata();
-  }, [fetchurl]);
-  
+function Action() {
+    const [movies, setMovies] = useState([]);
+    const [show, setShow] = useState(false);
+    const [movie, updateMovie] = useState([]);
+  const [timeoutid,settimeoutid]=useState();
 
-  console.log(movies);
 
-  const fetchDatas = async (movieid) => {
+    const fetchsearch= async  (searchString)=>{
+        const response=    await Axios.get (`https://api.themoviedb.org/3/search/movie?api_key=ece93cfd2faa956ad506021a1436b052&query=${searchString}`)
+        setMovies(response.data.results)
+        console.log(response.data.results);
+      }
+
+
+const onTextChange=(event)=>{
+    clearTimeout(timeoutid)
+    const timeout=setTimeout(() => {
+        fetchsearch(event.target.value)
+    }, 500);
+    settimeoutid(timeout);
+   
+}
+
+const fetchDatas = async (movieid) => {
     const response = await Axios.get(
       `https://api.themoviedb.org/3/movie/${movieid}?api_key=ece93cfd2faa956ad506021a1436b052`
     );
     updateMovie(response.data);
     // console.log(response.data);
   };
- 
 
-  return (
-    <>
-      <Dialog open={show}>
+    return (
+        <div>
+              <Header />
+              <div className='find'>
+                <input type="search" placeholder="search ur faviorate movie 😄 " className="searchfind" onChange={onTextChange}/>
+                <AiOutlineSearch className='searchicon' />
+              </div>
+              <Dialog open={show}>
         <DialogTitle>
           <h2>{movie.title}</h2>
           <div className="tagline">{movie.tagline}</div>
@@ -73,10 +86,11 @@ function Rows({ fetchurl, title }) {
         </DialogActions>
       </Dialog>
 
-      <h1 className="title">{title}</h1>
+{movies.length ?
+
       <div className="row_posters">
         {movies.map((movie) => (
-          <div className="images" onClick={() => fetchDatas(movie.id)}>
+          <div className="images" onClick={() => fetchDatas(movie.id)} key={movie.id}>
             <img
               key={movie.id}
               src={`${base_url}${movie.poster_path}`}
@@ -96,8 +110,12 @@ function Rows({ fetchurl, title }) {
           </div>
         ))}
       </div>
-    </>
-  );
+:
+<h1 className='placeh'>search your faviourate Movie 😄</h1>
+}
+            <Footer/>
+        </div>
+    )
 }
 
-export default Rows;
+export default Action

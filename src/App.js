@@ -10,6 +10,7 @@ import Comedy from './pages/Comedy';
 import Horror from './pages/Horror';
 import Romantic from './pages/Romantic';
 import Documentary from './pages/Documentary';
+import Search from "./pages//search/search"
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
       <Route exact path="/horror" element={<Horror/>}/>
       <Route exact path="/romance" element={<Romantic/>}/>
       <Route exact path="/documentary" element={<Documentary/>}/>
+      <Route exact path="/search" element={<Search/>}/>
  
     </Routes>
 

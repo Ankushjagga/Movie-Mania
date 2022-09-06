@@ -1,15 +1,16 @@
 .start{
     display: flex;
+justify-content: center;
+align-items: center;
     background-color: black;
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
 }
 .header>h1{
     color: #E50914;
     margin: 10px;
-    font-size: 40px;
+    font-size: 35px;
 }
 .logo{
     width: 60px;
@@ -18,13 +19,13 @@
 }
 .header{
     display: flex;
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 .links>ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 23px;
+    font-size: 20px;
 }
 .links>ul>li{
     margin: 5px 26px;
@@ -32,12 +33,10 @@
     text-decoration: none;
     list-style: none;
     color: inherit;
-    transition: transform 250ms ease;
 }
 .links>ul>li:hover{
 border-bottom: 1px solid #E50914;
-;
-transform: scale(1.07);
+
 color: #E50914;
 
 }
@@ -57,7 +56,7 @@ a{
     border: none;
 }
 svg{
-    margin: -4px 13px;
+    margin-right: 1rem;
 }
 .logolink{
     text-decoration: none;
@@ -95,6 +94,19 @@ flex-direction: column;
     visibility: hidden;
 }
 
+
+
+.search{
+   margin-left:2rem ;
+   background-color: #E50914;
+    font-size: 1.3rem;
+    padding: .4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:960px) {
 .links{
     display: none;
@@ -109,45 +121,26 @@ flex-direction: column;
 .hamburger{
 
     display: flex;
-    width: 100%;
     margin: 20px 17px;
-    justify-content: flex-end;
+    position: fixed;
+    right: 0;
 }
 .closes{
     visibility: visible;
 }
-svg{
-    font-size: 24px;
-    margin: 0;
-}
+
 
 }
-@media screen and (max-width:1185px) {
-svg{
-    margin: -2px 4px;
-}
-.links>ul>li>a {
-    margin: 5px 15px;
-    padding: 8px;
-}
-.links>ul>li{
-    font-size: 23px;
-    margin: 21px 6px;
-    padding: 0;
-}
-.links>ul{
-    margin: 0 50px;
-}
+@media screen and (max-width:1191px) {
+
+   .links>ul{
+    font-size: 1rem;
+   }
+
+
 }
 
 
-@media screen and (max-width:1047px) {
-
-    .links>ul>li {
-        font-size: 20px;
-        margin: 21px 2px;
-    }
-    }
 @media screen and (max-width:350px) {
 .hamburger{
     margin: 15px 3px;
@@ -161,4 +154,14 @@ svg{
     height: 40px;
 }
 
+}
+@media screen and (max-width:450px) {
+
+.start{
+    flex-direction: column;
+    padding: .2rem;
+}
+.hamburger{
+    top: 1%;
+}
 }

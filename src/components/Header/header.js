@@ -4,11 +4,12 @@ import Logo from "../../assests/logo.png";
 import { Link } from "react-router-dom";
 import { AiFillFire } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { BiTrendingUp } from "react-icons/bi";
 import { FaFilm } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-function Header() {
+function Header({onclick}) {
   const [toggle, setToggle] = useState(false);
 
   const toggleNav = () => {
@@ -59,6 +60,11 @@ function Header() {
     
         </ul>
       </span>
+
+      <Link to="/search">
+        <AiOutlineSearch className="search" title="search ur faviourate movie 😄" />
+
+      </Link>
     </div>
   );
 }
