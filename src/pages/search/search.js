@@ -47,7 +47,7 @@ const fetchDatas = async (movieid) => {
         <div>
               <Header />
               <div className='find'>
-                <input type="search" placeholder="search ur faviorate movie 😄 " className="searchfind" onChange={onTextChange}/>
+                <input type="text" placeholder="search ur faviorate movie 😄 " className="searchfind" onChange={onTextChange}/>
                 <AiOutlineSearch className='searchicon' />
               </div>
               <Dialog open={show}>
@@ -111,7 +111,7 @@ const fetchDatas = async (movieid) => {
         ))}
       </div>
 :
-<h1 className='placeh'>search your faviourate Movie 😄</h1>
+<h1 className='placeh'>No movie Found 😟</h1>
 }
             <Footer/>
         </div>

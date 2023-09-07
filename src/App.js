@@ -9,7 +9,7 @@ import Action from './pages/Action';
 import Comedy from './pages/Comedy';
 import Horror from './pages/Horror';
 import Romantic from './pages/Romantic';
-import Documentary from './pages/Documentary';
+import Science from './pages/Science';
 import Search from "./pages//search/search"
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Route exact path="/comedy" element={<Comedy/>}/>
       <Route exact path="/horror" element={<Horror/>}/>
       <Route exact path="/romance" element={<Romantic/>}/>
-      <Route exact path="/documentary" element={<Documentary/>}/>
+      <Route exact path="/sciencefiction" element={<Science/>}/>
       <Route exact path="/search" element={<Search/>}/>
  
     </Routes>

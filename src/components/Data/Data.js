@@ -1,5 +1,5 @@
 import Horror from "../../assests/horror.jpg"
-import Documentary from "../../assests/documentry.jpg"
+import Science from "../../assests/science.jpg"
 import Comedy from "../../assests/comedy.jpg"
 import Action from "../../assests/action.jpg"
 import Romantic from "../../assests/romantic.jpg"
@@ -29,9 +29,9 @@ export const Data =  [
         linkUrl: 'romance',
     },
     {
-        title: 'Documentaries',
+        title: 'Science Fiction',
         imageUrl:
-`${Documentary}`,
-        linkUrl: 'documentary',
+`${Science}`,
+        linkUrl: 'sciencefiction',
     },
 ]

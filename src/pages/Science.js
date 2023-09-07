@@ -7,7 +7,7 @@ function Documentary() {
     return (
         <div>
                <Header/>
-               <Rows fetchurl={requests.fetchDocumentries} title='Documentries'/>   
+               <Rows fetchurl={requests.fetchScience} title='Science Fiction'/>   
 
 
             <Footer/>
